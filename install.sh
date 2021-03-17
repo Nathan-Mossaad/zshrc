@@ -14,4 +14,7 @@ git clone https://github.com/zdharma/zinit.git ~/.zinit/bin
 #set zsh to default shell
 chsh -s /bin/zsh
 
-echo "To remove bakups run: irm -r bak.zshrc"
+echo "To remove bakups run: rm -r bak.zshrc"
+
+#remove instaler
+rm ~/install.sh
