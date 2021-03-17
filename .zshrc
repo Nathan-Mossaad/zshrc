@@ -12,7 +12,6 @@ zinit snippet https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/command-not
 zinit load zsh-users/zsh-syntax-highlighting
 zinit load zsh-users/zsh-autosuggestions
 zinit load chrissicool/zsh-256color
-zinit load voronkovich/apache2.plugin.zsh
 #zinit load marlonrichert/zsh-autocomplete
 zinit load hcgraf/zsh-sudo 
 zinit load zsh-users/zsh-completions
