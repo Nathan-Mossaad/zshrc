@@ -10,9 +10,9 @@ The installer will promt you if you are using apt, dnf or pacman, if have instal
 
 
 ### One line install:
-`curl -o ~/install.sh "https://git.io/JmqBE"; ~/install.sh`
+`curl -o ~/install.sh -L "https://git.io/JmqBE"; zsh ~/install.sh`
 
 ### One line install with .zshrc backup removal:
-`curl -o ~/install.sh "https://git.io/JmqBE"; ~/install.sh; rm -r bak.zshrc"`
+`curl -o ~/install.sh -L "https://git.io/JmqBE"; zsh ~/install.sh; rm -r ~/bak.zshrc`
 
 Remember to launch a new zsh shell to finalize install
