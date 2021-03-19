@@ -1,7 +1,3 @@
-sudo apt install zsh curl git
-sudo dnf install zsh curl git
-sudo pacman -S zsh curl git
-
 #get new zshrc
 mv ~/.zshrc bak.zshrc
 curl -o ~/.zshrc "https://raw.githubusercontent.com/Nathan-Mossaad/zshrc/main/.zshrc"
