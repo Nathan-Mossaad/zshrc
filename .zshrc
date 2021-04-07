@@ -42,7 +42,7 @@ zstyle ':completion::complete:*' gain-privileges 1
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 
-alias u="sudo apt upgrade -yes; sudo dnf update -y; yes y | yay; flatpak update; zinit self-update; zinit update --all"
+alias u="sudo apt upgrade --yes; sudo dnf update -y; yes y | yay; flatpak update -y; zinit self-update; zinit update --all"
 alias c="clear"
 
 
@@ -54,7 +54,6 @@ auto-run () {
 }
 zle -N auto-run
 bindkey '^M' auto-run
-
 
 
 export PATH=$HOME/.local/bin:$PATH
