@@ -48,7 +48,7 @@ alias c="clear"
 
 auto-run () { 
   if [ ${#${(z)BUFFER}} -eq 0 ]; then
-    clear; ls -alh --color
+    clear; ls -alh --color; echo ""
   fi
   zle accept-line
 }
