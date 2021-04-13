@@ -13,3 +13,6 @@ Required Packages `zsh git curl`
 `curl -o ~/install.sh -L "https://git.io/JmqBE"; zsh ~/install.sh; rm -r ~/bak.zshrc`
 
 Remember to launch a new zsh shell to finalize install
+
+### Replace .zshrc itself (e.g. when trying to update without internet)
+`curl -o ~/.zshrc "https://git.io/JOYhk"`
