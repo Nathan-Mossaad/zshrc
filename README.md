@@ -15,4 +15,4 @@ Required Packages `zsh git curl`
 Remember to launch a new zsh shell to finalize install
 
 ### Replace .zshrc itself (e.g. when trying to update without internet)
-`curl -o ~/.zshrc "https://git.io/JOYhk"`
+`curl -o ~/.zshrc -L "https://git.io/JOYhk"`
