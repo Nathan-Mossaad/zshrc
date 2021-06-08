@@ -8,11 +8,12 @@ fi
 source ~/.zinit/bin/zinit.zsh
 
 
+#zinit snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
+#zinit snippet https://github.com/docker/compose/blob/master/contrib/completion/zsh/_docker-compose
 zinit snippet https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/command-not-found/command-not-found.plugin.zsh
 zinit load zsh-users/zsh-syntax-highlighting
 zinit load zsh-users/zsh-autosuggestions
 zinit load chrissicool/zsh-256color
-#zinit load marlonrichert/zsh-autocomplete
 zinit load hcgraf/zsh-sudo 
 zinit load zsh-users/zsh-completions
 
