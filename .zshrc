@@ -45,6 +45,7 @@ zstyle ':completion::complete:*' gain-privileges 1
 
 u () {
 	if read -q "choice?Update .zshrc itself? (y/n usually yes)"; then
+		echo ""
 		curl -o ~/.zshrc "https://raw.githubusercontent.com/Nathan-Mossaad/zshrc/main/.zshrc"
 	fi
 	echo ""
