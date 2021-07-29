@@ -43,7 +43,27 @@ zstyle ':completion::complete:*' gain-privileges 1
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 
-alias u="sudo apt upgrade --yes; sudo dnf update -y; yes y | yay; flatpak update -y; zinit self-update; zinit update --all; curl -o ~/.zshrc "https://raw.githubusercontent.com/Nathan-Mossaad/zshrc/main/.zshrc""
+u () {
+	if read -q "choice?Update .zshrc itself? (y/n usually yes)"; then
+		curl -o ~/.zshrc "https://raw.githubusercontent.com/Nathan-Mossaad/zshrc/main/.zshrc"
+	fi
+	echo ""
+	if command -v apt &> /dev/null; then
+		sudo apt upgrade --yes
+	fi
+	if command -v dnf &> /dev/null; then
+		sudo dnf update -y
+	fi
+	if command -v yay &> /dev/null; then
+		yes y | yay
+	fi
+	if command -v flatpak &> /dev/null; then
+		sudo flatpak update -y
+	fi
+	zinit self-update
+	zinit update --all
+}
+
 alias c="clear"
 
 

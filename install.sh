@@ -1,5 +1,5 @@
 #get new zshrc
-mv ~/.zshrc bak.zshrc
+mv ~/.zshrc ~/bak.zshrc
 curl -o ~/.zshrc "https://raw.githubusercontent.com/Nathan-Mossaad/zshrc/main/.zshrc"
 
 #install zinit
