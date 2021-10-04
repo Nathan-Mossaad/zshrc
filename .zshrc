@@ -8,8 +8,8 @@ fi
 source ~/.zinit/bin/zinit.zsh
 
 
-#zplugin ice as"completion"; zinit snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
-#zplugin ice as"completion"; zinit snippet https://github.com/docker/compose/blob/master/contrib/completion/zsh/_docker-compose
+#zinit ice as"completion"; zinit snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
+#zinit ice as"completion"; zinit snippet https://github.com/docker/compose/blob/master/contrib/completion/zsh/_docker-compose
 zinit snippet https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/command-not-found/command-not-found.plugin.zsh
 zinit load zsh-users/zsh-syntax-highlighting
 zinit load zsh-users/zsh-autosuggestions
