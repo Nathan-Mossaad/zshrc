@@ -62,6 +62,9 @@ u () {
 		sudo flatpak update -y
 		flatpak update -y
 	fi
+	if command -v pkg &> /dev/null; then
+		pkg update -y
+	fi
 	zinit self-update
 	zinit update --all
 }
