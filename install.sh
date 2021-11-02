@@ -5,7 +5,7 @@ curl -o ~/.zshrc "https://raw.githubusercontent.com/Nathan-Mossaad/zshrc/main/.z
 #install zinit
 rm -rf ~/.zinit
 mkdir ~/.zinit
-git clone https://github.com/zdharma/zinit.git ~/.zinit/bin
+git clone https://github.com/zdharma-continuum/zinit.git ~/.zinit/bin
 
 #set zsh to default shell
 chsh -s /bin/zsh
