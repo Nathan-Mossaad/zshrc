@@ -1,4 +1,9 @@
 # zshrc
+## Warning replace current zinit repository
+Due to the recent deletion of https://github.com/zdharma/zinit is it necessary to replace zinit with a new repo:
+
+`rm -rf ~/.zinit/bin; git clone https://github.com/zdharma-continuum/zinit.git ~/.zinit/bin`
+
 ## My custom .zshrc
 
 __Warning different Licenses may apply for downloaded Content!__
