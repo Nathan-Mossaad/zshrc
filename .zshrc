@@ -101,7 +101,7 @@ alias c="clear"
 # List all files in current Directory
 auto-run () { 
   if [ ${#${(z)BUFFER}} -eq 0 ]; then
-    clear; ls -alh --color; echo ""
+    ls -alh --color
   fi
   zle accept-line
 }
