@@ -108,6 +108,11 @@ auto-run () {
 zle -N auto-run
 bindkey '^M' auto-run
 
+# Command for safe session
+if command -v screen &> /dev/null; then
+  alias s="screen -RUS 'nathans-safe-session'"
+fi
+
 
 # Scriptpath
 export PATH=$HOME/.local/bin:$PATH
