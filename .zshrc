@@ -101,7 +101,11 @@ alias c="clear"
 # List all files in current Directory
 auto-run () { 
   if [ ${#${(z)BUFFER}} -eq 0 ]; then
-    ls -alh --color
+    if command -v lsd &> /dev/null; then
+      lsd -alh --color
+    else
+      ls -alh --color
+    fi
   fi
   zle accept-line
 }

@@ -11,6 +11,8 @@ __Warning different Licenses may apply for downloaded Content!__
 ## Install
 Required Packages `zsh git curl`
 
+Optional Packages `lsd`
+
 ### One line install:
 `curl -L "https://git.io/JmqBE" | zsh`
 
