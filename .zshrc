@@ -114,7 +114,7 @@ bindkey '^M' auto-run
 
 # Command for safe session
 if command -v screen &> /dev/null; then
-  alias s="screen -RUS 'nathans-safe-session'"
+  alias s="screen -RUSd 'nathans-safe-session'"
 fi
 
 
