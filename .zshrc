@@ -14,6 +14,7 @@ zinit load zsh-users/zsh-autosuggestions
 zinit load chrissicool/zsh-256color
 zinit load hcgraf/zsh-sudo 
 zinit load zsh-users/zsh-completions
+zinit load mdarocha/zsh-windows-title
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 # Load docker and docker-compose autocompletions if installed
