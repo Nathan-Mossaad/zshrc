@@ -103,7 +103,7 @@ alias c="clear"
 auto-run () { 
   if [ ${#${(z)BUFFER}} -eq 0 ]; then
     if command -v lsd &> /dev/null; then
-      lsd -alh --color
+      lsd -alh --color auto
     else
       ls -alh --color
     fi
