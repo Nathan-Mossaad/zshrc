@@ -17,21 +17,24 @@ zinit load zsh-users/zsh-completions
 zinit load mdarocha/zsh-windows-title
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 
+
+# Create and load everything from ~/.zfunc
+mkdir -p ~/.zfunc
+fpath+=~/.zfunc
+
+
 # Load docker and docker-compose autocompletions if installed
-if command -v docker &> /dev/null; then
-	zinit ice as"completion"; zinit snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
-fi
-if command -v docker-compose &> /dev/null; then
-	zinit ice as"completion"; zinit snippet https://github.com/docker/compose/blob/master/contrib/completion/zsh/_docker-compose
+if command -v docker &> /dev/null;
+  then	if [ ! -d ~/.zfunc/_docker ]; then
+		docker completion zsh > ~/.zfunc/_docker
+	fi
 fi
 # Load rustup and cargo completions
 if command -v rustup &> /dev/null; then
-	if [ ! -d ~/.zfunc ]; then
-		mkdir ~/.zfunc
+	if [ ! -d ~/.zfunc/_rustup ]; then
 		rustup completions zsh rustup > ~/.zfunc/_rustup
 		cat $(rustc --print sysroot)/share/zsh/site-functions/_cargo > ~/.zfunc/_cargo
 	fi
-	zinit ice as"completion"; fpath+=~/.zfunc
 fi
 
 
@@ -52,8 +55,6 @@ SAVEHIST=10000
 
 
 # Tab-behaviour
-autoload -Uz compinit
-compinit
 zstyle ':completion:*' menu select
 setopt COMPLETE_ALIASES
 zstyle ':completion::complete:*' gain-privileges 1
@@ -90,7 +91,7 @@ u () {
 		rustup self update
 		rustup update
 		rustup completions zsh rustup > ~/.zfunc/_rustup
-                cat $(rustc --print sysroot)/share/zsh/site-functions/_cargo > ~/.zfunc/_cargo
+		cat $(rustc --print sysroot)/share/zsh/site-functions/_cargo > ~/.zfunc/_cargo
 	fi
 	zinit self-update
 	zinit update --all
@@ -121,3 +122,7 @@ fi
 
 # Scriptpath
 export PATH=$HOME/.local/bin:$PATH
+
+# Load config
+autoload -Uz compinit
+compinit
