@@ -4,9 +4,11 @@
 __Warning different Licenses may apply for downloaded Content!__
 
 ## Install
-Required Packages `zsh git curl`
+Required Packages: `zsh git curl`
 
-Optional Packages `lsd screen`
+Optional Packages: `lsd screen`
+
+Fonts (Must have): https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#meslo-nerd-font-patched-for-powerlevel10k
 
 ### One line install:
 `curl -L "https://git.io/JmqBE" | zsh`
