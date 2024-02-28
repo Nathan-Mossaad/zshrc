@@ -9,12 +9,12 @@ source ~/.zinit/bin/zinit.zsh
 
 # Load standard scripts & p10k with zinit
 zinit snippet https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/command-not-found/command-not-found.plugin.zsh
-zinit load zsh-users/zsh-syntax-highlighting
-zinit load zsh-users/zsh-autosuggestions
+zinit ice wait'!0'; zinit load zsh-users/zsh-syntax-highlighting
+zinit ice wait'!0'; zinit load zsh-users/zsh-autosuggestions
 zinit load chrissicool/zsh-256color
 zinit load hcgraf/zsh-sudo 
 zinit load zsh-users/zsh-completions
-zinit load mdarocha/zsh-windows-title
+zinit ice wait'!0'; zinit load mdarocha/zsh-windows-title
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 
