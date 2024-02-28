@@ -24,8 +24,8 @@ fpath+=~/.zfunc
 
 
 # Load docker and docker-compose autocompletions if installed
-if command -v docker &> /dev/null;
-  then	if [ ! -d ~/.zfunc/_docker ]; then
+if command -v docker &> /dev/null; then
+	if [ ! -d ~/.zfunc/_docker ]; then
 		docker completion zsh > ~/.zfunc/_docker
 	fi
 fi
@@ -86,6 +86,12 @@ u () {
 	fi
 	if command -v pkg &> /dev/null; then
 		pkg update -y
+	fi
+	if command -v pipx &> /dev/null; then
+		pipx upgrade-all
+	fi
+	if command -v docker &> /dev/null; then
+		docker completion zsh > ~/.zfunc/_docker
 	fi
 	if command -v rustup &> /dev/null; then
 		rustup self update
