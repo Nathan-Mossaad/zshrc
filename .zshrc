@@ -107,12 +107,13 @@ u () {
 alias c="clear"
 
 # List all files in current Directory
-auto-run () { 
+auto-run () {
   if [ ${#${(z)BUFFER}} -eq 0 ]; then
     if command -v lsd &> /dev/null; then
-      lsd -alh --color auto
+      echo ""
+      lsd -Alh --color auto
     else
-      ls -alh --color
+      ls -Alh --color
     fi
   fi
   zle accept-line
